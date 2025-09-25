@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "impacts",
+  "info": {
+    "singularName": "impact",
+    "pluralName": "impacts",
+    "displayName": "Impact"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "impacts"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

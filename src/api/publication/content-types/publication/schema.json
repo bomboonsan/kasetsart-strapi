@@ -1,0 +1,124 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications",
+  "info": {
+    "singularName": "publication",
+    "pluralName": "publications",
+    "displayName": "Publication"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "publications"
+    },
+    "titleTH": {
+      "type": "text"
+    },
+    "titleEN": {
+      "type": "text"
+    },
+    "isEnvironmentallySustainable": {
+      "type": "string"
+    },
+    "journalName": {
+      "type": "text"
+    },
+    "doi": {
+      "type": "text"
+    },
+    "isbn": {
+      "type": "text"
+    },
+    "volume": {
+      "type": "string"
+    },
+    "issue": {
+      "type": "string"
+    },
+    "durationStart": {
+      "type": "date"
+    },
+    "durationEnd": {
+      "type": "date"
+    },
+    "pageStart": {
+      "type": "string"
+    },
+    "pageEnd": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    },
+    "isJournalDatabase": {
+      "type": "string"
+    },
+    "isScopus": {
+      "type": "boolean"
+    },
+    "scopusType": {
+      "type": "string"
+    },
+    "scopusValue": {
+      "type": "string"
+    },
+    "isACI": {
+      "type": "boolean"
+    },
+    "isTCI1": {
+      "type": "boolean"
+    },
+    "isTCI2": {
+      "type": "boolean"
+    },
+    "isAJG": {
+      "type": "boolean"
+    },
+    "ajgType": {
+      "type": "string"
+    },
+    "isABDC": {
+      "type": "boolean"
+    },
+    "abdcType": {
+      "type": "string"
+    },
+    "isSSRN": {
+      "type": "boolean"
+    },
+    "isWOS": {
+      "type": "boolean"
+    },
+    "wosType": {
+      "type": "string"
+    },
+    "fundName": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "abstractTH": {
+      "type": "text"
+    },
+    "abstractEN": {
+      "type": "text"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

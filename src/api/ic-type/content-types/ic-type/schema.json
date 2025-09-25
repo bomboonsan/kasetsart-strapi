@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ic_types",
+  "info": {
+    "singularName": "ic-type",
+    "pluralName": "ic-types",
+    "displayName": "IC Type"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "ic_types"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

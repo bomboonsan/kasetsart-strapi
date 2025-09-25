@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conferences",
+  "info": {
+    "singularName": "conference",
+    "pluralName": "conferences",
+    "displayName": "Conference"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "conferences"
+    },
+    "titleTH": {
+      "type": "text"
+    },
+    "titleEN": {
+      "type": "text"
+    },
+    "journalName": {
+      "type": "text"
+    },
+    "doi": {
+      "type": "text"
+    },
+    "isbn": {
+      "type": "text"
+    },
+    "durationStart": {
+      "type": "date"
+    },
+    "durationEnd": {
+      "type": "date"
+    },
+    "abstractTH": {
+      "type": "text"
+    },
+    "abstractEN": {
+      "type": "text"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "fundName": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "presentationWork": {
+      "type": "string"
+    },
+    "presentType": {
+      "type": "string"
+    },
+    "articleType": {
+      "type": "string"
+    },
+    "costType": {
+      "type": "string"
+    },
+    "isEnvironmentallySustainable": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    }
+  }
+}

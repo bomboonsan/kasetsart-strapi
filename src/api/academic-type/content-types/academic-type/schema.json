@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "academic_types",
+  "info": {
+    "singularName": "academic-type",
+    "pluralName": "academic-types",
+    "displayName": "Academic Type"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "academic_types"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

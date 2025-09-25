@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sdgs",
+  "info": {
+    "singularName": "sdg",
+    "pluralName": "sdgs",
+    "displayName": "SDG"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "sdgs"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

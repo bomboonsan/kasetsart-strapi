@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "funds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fund.fund",
+      "inversedBy": "books"
+    },
+    "writers": {
+      "type": "json"
+    },
+    "titleTH": {
+      "type": "text"
+    },
+    "titleEN": {
+      "type": "text"
+    },
+    "detail": {
+      "type": "text"
+    },
+    "publicationDate": {
+      "type": "date"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bookType": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    }
+  }
+}

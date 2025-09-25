@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fiscalYear": {
+      "type": "biginteger"
+    },
+    "projectType": {
+      "type": "string"
+    },
+    "projectMode": {
+      "type": "string"
+    },
+    "subProjectCount": {
+      "type": "string"
+    },
+    "isEnvironmentallySustainable": {
+      "type": "string"
+    },
+    "nameTH": {
+      "type": "text"
+    },
+    "nameEN": {
+      "type": "text"
+    },
+    "durationStart": {
+      "type": "date"
+    },
+    "durationEnd": {
+      "type": "date"
+    },
+    "researchKind": {
+      "type": "string"
+    },
+    "fundType": {
+      "type": "string"
+    },
+    "fundSubType": {
+      "type": "string"
+    },
+    "fundName": {
+      "type": "text"
+    },
+    "budget": {
+      "type": "biginteger"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ic_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ic-type.ic-type",
+      "mappedBy": "projects"
+    },
+    "impacts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::impact.impact",
+      "mappedBy": "projects"
+    },
+    "sdgs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sdg.sdg",
+      "inversedBy": "projects"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "projects"
+    },
+    "partners": {
+      "type": "json"
+    },
+    "conferences": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::conference.conference",
+      "mappedBy": "projects"
+    },
+    "publications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::publication.publication",
+      "mappedBy": "projects"
+    },
+    "departments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::department.department",
+      "mappedBy": "projects"
+    }
+  }
+}

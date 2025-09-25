@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funds",
+  "info": {
+    "singularName": "fund",
+    "pluralName": "funds",
+    "displayName": "Fund"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "writers": {
+      "type": "json"
+    },
+    "fundType": {
+      "type": "integer"
+    },
+    "fundTypeText": {
+      "type": "text"
+    },
+    "contentDesc": {
+      "type": "text"
+    },
+    "pastPublications": {
+      "type": "text"
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "targetGroup": {
+      "type": "text"
+    },
+    "chapterDetails": {
+      "type": "text"
+    },
+    "pages": {
+      "type": "biginteger"
+    },
+    "duration": {
+      "type": "date"
+    },
+    "references": {
+      "type": "text"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "funds"
+    },
+    "partners": {
+      "type": "json"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book.book",
+      "mappedBy": "funds"
+    }
+  }
+}
