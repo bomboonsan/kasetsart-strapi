@@ -1,5 +1,5 @@
 export default ({ env }) => ({
-  url: '/admin',
+  url: env('URL_STRAPI_PUBLIC') + '/admin',
   serveAdminPanel: true,
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
