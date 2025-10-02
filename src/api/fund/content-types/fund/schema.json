@@ -11,6 +11,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "fundName": {
+      "type": "string"
+    },
     "writers": {
       "type": "json"
     },

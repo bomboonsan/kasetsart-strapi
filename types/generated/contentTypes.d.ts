@@ -591,6 +591,7 @@ export interface ApiFundFund extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     duration: Schema.Attribute.Date;
+    fundName: Schema.Attribute.String;
     fundType: Schema.Attribute.Integer;
     fundTypeText: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
