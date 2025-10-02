@@ -438,6 +438,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     publisher: Schema.Attribute.String;
     refereed: Schema.Attribute.String;
+    researchType: Schema.Attribute.String;
     revision: Schema.Attribute.String;
     titleEN: Schema.Attribute.Text;
     titleTH: Schema.Attribute.Text;

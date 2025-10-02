@@ -68,6 +68,9 @@
     },
     "publisher": {
       "type": "string"
+    },
+    "researchType": {
+      "type": "string"
     }
   }
 }
