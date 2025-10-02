@@ -421,24 +421,31 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    bookStatus: Schema.Attribute.String;
     bookType: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     detail: Schema.Attribute.Text;
     funds: Schema.Attribute.Relation<'manyToMany', 'api::fund.fund'>;
+    isbn: Schema.Attribute.String;
     level: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::book.book'> &
       Schema.Attribute.Private;
+    numberPages: Schema.Attribute.String;
     publicationDate: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
+    publisher: Schema.Attribute.String;
+    refereed: Schema.Attribute.String;
+    revision: Schema.Attribute.String;
     titleEN: Schema.Attribute.Text;
     titleTH: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     writers: Schema.Attribute.JSON;
+    yearContracted: Schema.Attribute.String;
   };
 }
 
@@ -591,6 +598,7 @@ export interface ApiFundFund extends Struct.CollectionTypeSchema {
     pages: Schema.Attribute.BigInteger;
     partners: Schema.Attribute.JSON;
     pastPublications: Schema.Attribute.Text;
+    period: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     purpose: Schema.Attribute.Text;
     references: Schema.Attribute.Text;

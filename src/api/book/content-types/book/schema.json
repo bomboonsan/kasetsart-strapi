@@ -47,6 +47,27 @@
     },
     "level": {
       "type": "string"
+    },
+    "revision": {
+      "type": "string"
+    },
+    "bookStatus": {
+      "type": "string"
+    },
+    "isbn": {
+      "type": "string"
+    },
+    "yearContracted": {
+      "type": "string"
+    },
+    "refereed": {
+      "type": "string"
+    },
+    "numberPages": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
     }
   }
 }

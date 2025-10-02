@@ -41,6 +41,9 @@
     "duration": {
       "type": "date"
     },
+    "period": {
+      "type": "string"
+    },
     "references": {
       "type": "text"
     },
